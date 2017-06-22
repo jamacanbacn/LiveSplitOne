@@ -29,8 +29,11 @@ function createWindow() {
 		win.show();
 	});
 
+	win.setAlwaysOnTop(true);
+
 	// Open the DevTools.
-	//win.webContents.openDevTools()
+	// win.webContents.openDevTools()
+
 	// Emitted when the window is closed.
 	win.on('closed', () => {
 		// Dereference the window object, usually you would store windows
@@ -39,6 +42,9 @@ function createWindow() {
 		win = null
 	})
 }
+
+// Workaround for OBS Issues
+app.disableHardwareAcceleration();
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
