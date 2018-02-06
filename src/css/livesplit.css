@@ -21,46 +21,6 @@ body {
     transition: all 0.5s ease;
 }
 
-.sidebar {
-    background: hsl(0, 0%, 10%);
-    padding: 10px;
-    padding-top: 15px;
-    width: 250px;
-    z-index: 4 !important;
-}
-
-.sidebar > div > hr {
-    border-color: hsla(0, 0%, 30%, 1);
-}
-
-.sidebar > div > h2 {
-    font-size: 1.5em;
-    text-align: center;
-    height: 20px;
-}
-
-.sidebar > div > div.small > button {
-    width: 125px;
-    height: 40px;
-    font-size: 18px;
-}
-
-.choose-comparison > button {
-    width: 30px;
-    height: 40px;
-    font-size: 28px;
-}
-
-.choose-comparison > span {
-    width: 190px;
-    text-align: center;
-    display: inline-block;
-    font-size: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 button.toggle-left {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -84,171 +44,6 @@ button.toggle-right {
     user-select: none;
 }
 
-.previous-segment,
-.sum-of-best,
-.possible-time-save,
-.total-playtime,
-.current-pace,
-.delta-component,
-.current-comparison,
-.text-component {
-    height: 24px;
-    line-height: 20px;
-    padding: 0px 6px;
-}
-
-.previous-segment-text,
-.sum-of-best-text,
-.possible-time-save-text,
-.total-playtime-text,
-.current-pace-text,
-.delta-component-text,
-.current-comparison-text {
-    width: 100%;
-}
-
-.previous-segment-time,
-.sum-of-best-time,
-.possible-time-save-time,
-.total-playtime-time,
-.current-pace-time,
-.delta-component-time,
-.current-comparison-comparison {
-    text-align: right;
-    white-space: nowrap;
-}
-
-.title {
-    display: flex;
-    height: 36px;
-    width: 100%;
-}
-
-.title > div >  span,
-div#lower-row > div {
-    width: inherit;
-    font-size: 13px;
-}
-
-span.title-game {
-    line-height: 19px;
-    width: 95% !important;
-    display: flex;
-    height: 50%;
-    justify-content: center;
-}
-
-span.title-game,
-div#lower-row {
-    padding: 0px 6px;
-}
-
-div#lower-row > div.title-attempts {
-    width: 40px;
-    text-align: right;
-    display: inline-block;
-    vertical-align: bottom;
-    padding-bottom: 4px;
-}
-
-div#lower-row > div.title-category {
-    width: calc(100% - 80px);
-    padding-left: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.detailed-timer {
-    position: relative;
-}
-
-.detailed-timer-left-side {
-    position: absolute;
-    left: 6px;
-    bottom: 2px;
-    font-size: 11px;
-}
-
-div.meta-left > span.title-game {
-    margin-right: 0px;
-    justify-content: baseline;
-}
-
-.title > div.meta-left > span,
-div.meta-left > div#lower-row > div:not(.title-attempts) {
-    text-align: left;
-}
-
-div.meta-left > div#lower-row > div.title-category {
-    width: calc(100% - 40px);
-    padding: 0;
-    justify-content: baseline;
-}
-
-div.meta-two-lines > div#lower-row > div.title-category {
-    align-items: baseline;
-    vertical-align: top;
-    padding-top: 1px;
-}
-
-div.meta-two-lines > div#lower-row > div.title-attempts {
-    vertical-align: top;
-    padding-bottom: 0;
-    padding-top: 1px;
-}
-
-.game-icon-container {
-    flex: 1;
-    max-width: 40px;
-    min-width: 40px;
-    padding: 4px;
-    height: auto;
-}
-
-.run-meta {
-    flex: 2;
-    min-width: 0;
-    width: initial;
-}
-
-.run-meta > span,
-.run-meta > div#lower-row > div {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-img.title-icon {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.splits {
-    display: table;
-    width: 100%;
-}
-
-div.splits span.split.split-separator div {
-    line-height: 18px;
-}
-
-.split {
-    display: table-row;
-    height: 24px;
-    line-height: 20px;
-}
-
-.split div {
-    display: table-cell;
-    text-align: right;
-    padding: 1px 6px 0px 6px;
-}
-
 td#dif {
     border-right: 10px solid transparent;
     text-align: right;
@@ -258,47 +53,9 @@ table {
     border-spacing: 0px 2px;
 }
 
-.split-name {
-    text-overflow: ellipsis;
-    width: 100%;
-    padding-left: 0px !important;
-    text-align: left !important;
-    max-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.split-icon-container {
-    padding-right: 6px !important;
-}
-
-.split-icon-container-empty {
-    padding-right: 0px !important;
-}
-
-.split-icon, .title-icon {
-    max-width: 18px;
-    height: 18px;
-    vertical-align: middle;
-    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
-}
-
 .time {
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-}
-
-div.timer-time {
-    font-size: 60px;
-    text-align: right;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-family: timer, sans-serif;
-    margin-top: -10px;
-}
-
-.timer-fraction {
-    font-size: 45px;
 }
 
 .buttons {
@@ -346,243 +103,12 @@ button {
     font-family: 'fira', sans-serif;
 }
 
-.sidebar-buttons > button {
-    width: 250px;
-    height: 40px;
-}
-
 .buttons > div > button {
     width: 48%;
 }
 
-.run-editor {
-    padding: 10px 10px 10px 10px;
-}
-
-.group {
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.group > input {
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 285px;
-    border: none;
-    border-bottom: 1px solid #aaa;
-    background: transparent;
-    color: white;
-    font-family: 'fira', sans-serif;
-}
-.group > input:focus {
-    outline: none;
-}
-
-.group > label 				 {
-    color:hsla(50, 0%, 75%, 1);
-    font-size: 18px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.group > input:focus ~ label, .group > input:valid ~ label 		{
-    top: -13px;
-    font-size: 14px;
-}
-
-.group > input:focus ~ label {
-    color: hsla(50, 100%, 50%, 1);
-}
-
-.group.invalid > input:focus ~ label {
-    color: hsla(0, 100%, 50%, 1);
-}
-
-.group > .bar { position: relative; display: block; width: 300px; }
-.group > .bar:before, .group > .bar:after 	{
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: hsla(50, 100%, 50%, 1);
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-.group > .bar:before {
-    left:50%;
-}
-.group > .bar:after {
-    right:50%;
-}
-
-.group.invalid > .bar:before, .group.invalid > .bar:after {
-    background: hsla(0, 100%, 50%, 1);
-}
-
-.group > input:focus ~ .bar:before, .group > input:focus ~ .bar:after {
-    width:50%;
-}
-
-/* Run Editor */
-.table {
-	width: 100%;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-	display: table;
-    border: 1px solid hsl(0, 0%, 25%);
-    border-collapse: collapse;
-}
-.table-body{
-    display: table-row-group;
-}
-.table>.table-header>tr,
-.table-body>* {
-	display: table-row;
-	background: rgba(0, 0, 0, 0.5);
-}
-.table-body>*:nth-of-type(odd) {
-	background: rgba(0, 0, 0, 0.2);
-}
-.table>.table-header>tr>*,
-.table-body>*>* {
-	padding: 3px 12px;
-	display: table-cell;
-}
-.table>.table-header>tr>*:nth-child(2),
-.table-body>*>*:nth-child(2) {
-	padding: 3px 12px 3px 5px;
-}
-.btn-group button {
-    font-size: 15px;
-	width: 160px;
-	height: 30px;
-	margin-right: 5px;
-	display: block;
-}
-
-.btn-group button:nth-child(1) {
-    margin-top: 0;
-}
-
-.editor-group {
-	display: inline-flex
-}
-
-tr > td >input {
-    width: 100px;
-    margin-right: -40px;
-}
-
-input.name {
-    width: 160px;
-}
-
-.table-header>tr>th {
-    width: 78px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.table-header>tr>th:after {
-    content:' ';
-    position: relative;
-    display:block;
-    border-top: 1.5px solid hsla(0, 0%, 100%, 0.2);
-    margin: 0 -12px;
-    bottom: -4px;
-}
-
-input {
-    font-size: 15px;
-    border: none;
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
-    background: transparent;
-    color: white;
-    text-overflow: ellipsis;
-    font-family: 'fira', sans-serif;
-}
-
-input.number {
-    text-align: right;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-}
-
-.run-editor-table {
-    margin-left: 5px;
-}
-
-.run-editor-info {
-    display: inline-flex;
-    margin-bottom: 10px;
-}
-
-.run-editor-info-table {
-    padding-top: 10px;
-    margin-left: 15px;
-}
-
-table.run-editor-info-table > tbody > tr > td {
-    padding: 0px 10px 0px 10px;
-}
-
-table.run-editor-table > tbody > tr > td > input:not(.name) {
-    text-align: right;
-}
-
-.timing-selection > button {
-    position: relative;
-    left: 170px;
-    width: 100px;
-}
-
-.tab-bar > button {
-    font-size: 15px;
-    height: 30px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    margin-bottom: 0px;
-    border-bottom: 0px;
-}
-
-.layout-editor-tabs {
-    margin-left: 20px;
-}
-
-.selected {
-    background: linear-gradient(rgb(51, 115, 244) 0%, rgb(21, 53, 116) 100%) !important;
-}
-
-input[Type="text"] {
-    font-family:inherit;
-}
-
-.table-header>tr>th:nth-child(1):after {
-    margin: 0;
-    margin-left: -4px;
-    margin-right: 7px;
-}
-
 svg.graph {
     display: block;
-}
-
-.layout-editor-inner {
-    margin: 20px;
-    width: 445px;
-    display: inline-flex;
-}
-
-.layout-editor-outer {
-    display: inline-flex;
 }
 
 .react-contextmenu {
@@ -617,19 +143,6 @@ svg.graph {
     cursor: pointer;
 }
 
-.layout-editor-inner .btn-group button {
-    width: 40px;
-    height: 40px;
-}
-
-.layout-editor-component-list {
-    margin-left: 10px;
-}
-
-.layout-editor-component {
-    cursor: pointer;
-}
-
 .react-contextmenu-item--divider {
     margin-bottom: 3px;
     padding: 2px 0;
@@ -641,25 +154,6 @@ svg.graph {
     background: linear-gradient(rgb(51, 115, 244) 0%, rgb(21, 53, 116) 100%);
 }
 
-.component-settings {
-    margin-left: 20px;
-    width: 500px;
-}
-
-.component-settings > tbody > tr {
-    height: 30px;
-}
-
-.component-settings > tbody > tr > td:nth-child(1) {
-    width: 250px;
-}
-
-.component-settings > tbody > tr > td:nth-child(2) > input,
-.component-settings > tbody > tr > td:nth-child(2) > span,
-.component-settings > tbody > tr > td:nth-child(2) > select {
-    width: 100%;
-}
-
 select {
     background: hsla(0, 0%, 9%, 1);
     font-size: 15px;
@@ -667,11 +161,6 @@ select {
     color: white;
     text-overflow: ellipsis;
     font-family: 'fira', sans-serif;
-}
-
-.separator {
-    background-color: hsla(0, 0%, 43%, 1);
-    height: 2px;
 }
 
 button.disabled, button.button-pressed.disabled, button.disabled:active {
@@ -686,19 +175,3 @@ button.disabled, button.button-pressed.disabled, button.disabled:active {
     margin-left: -50%;
 }
 
-.text-component {
-    overflow: hidden;
-}
-
-.text-component>table {
-    width: 100%;
-}
-.center-text {
-    text-align: -webkit-center;
-    text-align: center;
-}
-.text-component-text {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}

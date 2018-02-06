@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.current-comparison {
+    @extend %info-text-component;
+}
+
+.current-comparison-text {
+    @extend %info-text-component-text;
+}
+
+.current-comparison-comparison {
+    @extend %info-text-component-value;
+}

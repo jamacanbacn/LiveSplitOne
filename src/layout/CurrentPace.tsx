@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./CurrentPace.scss";
+
 export interface Props { state: LiveSplit.CurrentPaceComponentStateJson }
 
 export default class CurrentPace extends React.Component<Props> {

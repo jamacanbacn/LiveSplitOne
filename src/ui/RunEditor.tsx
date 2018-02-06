@@ -4,6 +4,9 @@ import * as LiveSplit from "../livesplit";
 import { openFileAsArrayBuffer } from "../util/FileUtil";
 import { TextBox } from "./TextBox";
 
+import "./Editor.scss";
+import "./RunEditor.scss";
+
 export interface Props { editor: LiveSplit.RunEditor }
 export interface State {
     editor: LiveSplit.RunEditorStateJson,

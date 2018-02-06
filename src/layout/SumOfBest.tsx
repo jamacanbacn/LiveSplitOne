@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./SumOfBest.scss";
+
 export interface Props { state: LiveSplit.SumOfBestComponentStateJson }
 
 export default class SumOfBest extends React.Component<Props> {

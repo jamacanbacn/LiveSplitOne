@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./PossibleTimeSave.scss";
+
 export interface Props { state: LiveSplit.PossibleTimeSaveComponentStateJson }
 
 export default class PossibleTimeSave extends React.Component<Props> {

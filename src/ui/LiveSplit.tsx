@@ -9,8 +9,10 @@ import { exportFile, openFileAsArrayBuffer, openFileAsString } from "../util/Fil
 import { assertNull, expect, maybeDispose, maybeDisposeAndThen, Option } from "../util/OptionUtil";
 import * as SplitsIO from "../util/SplitsIO";
 import { LayoutEditor as LayoutEditorComponent } from "./LayoutEditor";
-import { RunEditor as RunEditorComponent } from "./RunEditor";
+// import { RunEditor as RunEditorComponent } from "./RunEditor";
 import { Route, SideBarContent } from "./SideBarContent";
+
+import "./Sidebar.css";
 
 export interface State {
     hotkeySystem: Option<HotkeySystem>,
@@ -53,12 +55,13 @@ export class LiveSplit extends React.Component<{}, State> {
         } else {
             const lss = localStorage.getItem("splits");
             if (lss != null) {
-                const result = Run.parseString(lss, "", false);
-                if (result.parsedSuccessfully()) {
-                    maybeDispose(result.unwrap().with(
-                        (r) => timer.writeWith((t) => t.setRun(r)),
-                    ));
-                }
+                Run.parseString(lss, "", false).with((result) => {
+                    if (result.parsedSuccessfully()) {
+                        maybeDispose(result.unwrap().with(
+                            (r) => timer.writeWith((t) => t.setRun(r)),
+                        ));
+                    }
+                });
             }
         }
 
@@ -106,12 +109,13 @@ export class LiveSplit extends React.Component<{}, State> {
 
     public render() {
         const [route, content] = ((): [Route, JSX.Element] => {
-            if (this.state.runEditor) {
-                return [
-                    "run-editor",
-                    <RunEditorComponent editor={this.state.runEditor} />,
-                ];
-            } else if (this.state.layoutEditor) {
+            // if (this.state.runEditor) {
+            //     return [
+            //         "run-editor",
+            //         <RunEditorComponent editor={this.state.runEditor} />,
+            //     ];
+            // } else
+            if (this.state.layoutEditor) {
                 return [
                     "layout-editor",
                     <LayoutEditorComponent
@@ -188,16 +192,17 @@ export class LiveSplit extends React.Component<{}, State> {
     public importSplits() {
         openFileAsArrayBuffer((file) => {
             const timer = this.state.timer;
-            const result = Run.parseArray(new Int8Array(file), "", false);
-            if (result.parsedSuccessfully()) {
-                const run = result.unwrap();
-                maybeDisposeAndThen(
-                    timer.writeWith((t) => t.setRun(run)),
-                    () => alert("Empty Splits are not supported."),
-                );
-            } else {
-                alert("Couldn't parse the splits.");
-            }
+            Run.parseArray(new Int8Array(file), "", false).with((result) => {
+                if (result.parsedSuccessfully()) {
+                    const run = result.unwrap();
+                    maybeDisposeAndThen(
+                        timer.writeWith((t) => t.setRun(run)),
+                        () => alert("Empty Splits are not supported."),
+                    );
+                } else {
+                    alert("Couldn't parse the splits.");
+                }
+            });
         });
     }
 

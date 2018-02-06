@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as LiveSplit from "../livesplit";
 
+import "./Text.scss";
+
 export interface Props { state: LiveSplit.TextComponentStateJson }
 
 export default class Text extends React.Component<Props> {

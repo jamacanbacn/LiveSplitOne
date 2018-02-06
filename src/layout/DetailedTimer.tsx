@@ -3,21 +3,24 @@ import * as LiveSplit from "../livesplit";
 import { gradientToCss } from "../util/ColorUtil";
 import { renderToSVG } from "./Timer";
 
+import "./DetailedTimer.scss";
+
 export interface Props { state: LiveSplit.DetailedTimerComponentStateJson }
 
 export default class DetailedTimer extends React.Component<Props> {
     public render() {
         const children = [];
 
-        children.push(renderToSVG(
-            this.props.state.timer,
-            "timer",
-        ));
-
-        children.push(renderToSVG(
-            this.props.state.segment_timer,
-            "segment-timer",
-        ));
+        children.push(
+            renderToSVG(
+                this.props.state.timer,
+                "timer",
+            ),
+            renderToSVG(
+                this.props.state.segment_timer,
+                "segment-timer",
+            ),
+        );
 
         const leftSide = [];
 

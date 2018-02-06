@@ -1,0 +1,73 @@
+.table {
+	width: 100%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	display: table;
+    border: 1px solid hsl(0, 0%, 25%);
+    border-collapse: collapse;
+}
+
+.table-body {
+    display: table-row-group;
+}
+
+.table > .table-header > tr,
+.table-body > * {
+	display: table-row;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.table-body > *:nth-of-type(odd) {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.table > .table-header > tr > *,
+.table-body > * > * {
+	padding: 3px 12px;
+	display: table-cell;
+}
+
+.table > .table-header > tr > *:nth-child(2),
+.table-body > * > *:nth-child(2) {
+	padding: 3px 12px 3px 5px;
+}
+
+.selected {
+    background: linear-gradient(rgb(51, 115, 244) 0%, rgb(21, 53, 116) 100%) !important;
+}
+
+.tab-bar > button {
+    font-size: 15px;
+    height: 30px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.btn-group button {
+    font-size: 15px;
+	width: 160px;
+	height: 30px;
+	margin-right: 5px;
+	display: block;
+}
+
+.btn-group button:nth-child(1) {
+    margin-top: 0;
+}
+
+input {
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+    background: transparent;
+    color: white;
+    text-overflow: ellipsis;
+    font-family: 'fira', sans-serif;
+}
+
+input.number {
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}

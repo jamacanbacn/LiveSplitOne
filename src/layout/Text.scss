@@ -1,0 +1,21 @@
+@import "InfoTextComponent.scss";
+
+.text-component {
+    @extend %info-text-component;
+    overflow: hidden;
+}
+
+.text-component > table {
+    width: 100%;
+}
+
+.center-text {
+    text-align: -webkit-center;
+    text-align: center;
+}
+
+.text-component-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}

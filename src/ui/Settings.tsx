@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Color, SettingsDescriptionJson, SettingValue } from "../livesplit";
-import { assertNever, expect, Option } from "../util/OptionUtil";
+import { expect, Option } from "../util/OptionUtil";
 import ColorPicker from "./ColorPicker";
 
 export interface Props {
@@ -235,10 +235,8 @@ export default class SettingsComponent extends React.Component<Props> {
                         color1 = gradient.Plain;
                     } else if ("Vertical" in gradient) {
                         [color1, color2] = gradient.Vertical;
-                    } else if ("Horizontal" in gradient) {
-                        [color1, color2] = gradient.Horizontal;
                     } else {
-                        assertNever(gradient);
+                        [color1, color2] = gradient.Horizontal;
                     }
                 } else {
                     type = "Transparent";
@@ -385,7 +383,7 @@ export default class SettingsComponent extends React.Component<Props> {
                     <span>
                         {children}
                     </span>;
-            } else if ("Alignment" in value) {
+            } else {
                 component = <select
                     value={value.Alignment}
                     onChange={(e) => {
@@ -402,8 +400,6 @@ export default class SettingsComponent extends React.Component<Props> {
                     <option value="Left">Left</option>
                     <option value="Center">Center</option>
                 </select>;
-            } else {
-                assertNever(value);
             }
 
             settingsRows.push(

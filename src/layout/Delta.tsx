@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./Delta.scss";
+
 export interface Props { state: LiveSplit.DeltaComponentStateJson }
 
 export default class Delta extends React.Component<Props> {

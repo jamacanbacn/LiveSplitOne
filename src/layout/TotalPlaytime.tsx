@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./TotalPlaytime.scss";
+
 export interface Props { state: LiveSplit.TotalPlaytimeComponentStateJson }
 
 export default class TotalPlaytime extends React.Component<Props> {

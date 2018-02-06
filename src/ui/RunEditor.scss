@@ -1,0 +1,143 @@
+.editor-group {
+	display: inline-flex;
+}
+
+tr > td > input {
+    width: 100px;
+    margin-right: -40px;
+}
+
+input.name {
+    width: 160px;
+}
+
+.table-header > tr > th {
+    width: 78px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-header > tr > th:after {
+    content: ' ';
+    position: relative;
+    display: block;
+    border-top: 1.5px solid hsla(0, 0%, 100%, 0.2);
+    margin: 0 -12px;
+    bottom: -4px;
+}
+
+.run-editor-table {
+    margin-left: 5px;
+}
+
+.run-editor-info {
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.run-editor-info-table {
+    padding-top: 10px;
+    margin-left: 15px;
+}
+
+table.run-editor-info-table > tbody > tr > td {
+    padding: 0px 10px 0px 10px;
+}
+
+table.run-editor-table > tbody > tr > td > input:not(.name) {
+    text-align: right;
+}
+
+.timing-selection > button {
+    position: relative;
+    left: 170px;
+    width: 100px;
+}
+
+input[Type="text"] {
+    font-family: inherit;
+}
+
+.table-header > tr > th:nth-child(1):after {
+    margin: 0;
+    margin-left: -4px;
+    margin-right: 7px;
+}
+
+
+.run-editor {
+    padding: 10px 10px 10px 10px;
+}
+
+.group {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.group > input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 285px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    color: white;
+    font-family: 'fira', sans-serif;
+}
+.group > input:focus {
+    outline: none;
+}
+
+.group > label 				 {
+    color: hsla(50, 0%, 75%, 1);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.group > input:focus ~ label, .group > input:valid ~ label {
+    top: -13px;
+    font-size: 14px;
+}
+
+.group > input:focus ~ label {
+    color: hsla(50, 100%, 50%, 1);
+}
+
+.group.invalid > input:focus ~ label {
+    color: hsla(0, 100%, 50%, 1);
+}
+
+.group > .bar { position: relative; display: block; width: 300px; }
+.group > .bar:before, .group > .bar:after 	{
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: hsla(50, 100%, 50%, 1);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.group > .bar:before {
+    left: 50%;
+}
+.group > .bar:after {
+    right: 50%;
+}
+
+.group.invalid > .bar:before, .group.invalid > .bar:after {
+    background: hsla(0, 100%, 50%, 1);
+}
+
+.group > input:focus ~ .bar:before, .group > input:focus ~ .bar:after {
+    width:50%;
+}

@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.current-pace {
+    @extend %info-text-component;
+}
+
+.current-pace-text {
+    @extend %info-text-component-text;
+}
+
+.current-pace-time {
+    @extend %info-text-component-value;
+}

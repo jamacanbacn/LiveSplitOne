@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.sum-of-best {
+    @extend %info-text-component;
+}
+
+.sum-of-best-text {
+    @extend %info-text-component-text;
+}
+
+.sum-of-best-time {
+    @extend %info-text-component-value;
+}

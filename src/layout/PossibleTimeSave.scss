@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.possible-time-save {
+    @extend %info-text-component;
+}
+
+.possible-time-save-text {
+    @extend %info-text-component-text;
+}
+
+.possible-time-save-time {
+    @extend %info-text-component-value;
+}

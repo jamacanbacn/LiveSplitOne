@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.total-playtime {
+    @extend %info-text-component;
+}
+
+.total-playtime-text {
+    @extend %info-text-component-text;
+}
+
+.total-playtime-time {
+    @extend %info-text-component-value;
+}

@@ -1,0 +1,44 @@
+.sidebar {
+    background: hsl(0, 0%, 10%);
+    padding: 10px;
+    padding-top: 15px;
+    width: 250px;
+    z-index: 4 !important;
+}
+
+.sidebar > div > hr {
+    border-color: hsla(0, 0%, 30%, 1);
+}
+
+.sidebar > div > h2 {
+    font-size: 1.5em;
+    text-align: center;
+    height: 20px;
+}
+
+.sidebar > div > div.small > button {
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.choose-comparison > button {
+    width: 30px;
+    height: 40px;
+    font-size: 28px;
+}
+
+.choose-comparison > span {
+    width: 190px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sidebar-buttons > button {
+    width: 250px;
+    height: 40px;
+}

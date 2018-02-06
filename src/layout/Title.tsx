@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./Title.scss";
+
 export interface Props { state: LiveSplit.TitleComponentStateJson }
 
 export default class Title extends React.Component<Props> {
@@ -47,10 +49,22 @@ export default class Title extends React.Component<Props> {
                 }}
             >
                 {icon}
-                <div className={"run-meta" + (!this.props.state.is_centered ? " meta-left" : "") + (twoLines ? " meta-two-lines" : "")}>
-                    {twoLines ? <span className="title-game">{this.props.state.line1}</span> : <div style={{ display: "none" }} />}
+                <div
+                    className={
+                        "run-meta" +
+                        (!this.props.state.is_centered ? " meta-left" : "") +
+                        (twoLines ? " meta-two-lines" : "")
+                    }
+                >
+                    {
+                        twoLines ?
+                            <span className="title-game">{this.props.state.line1}</span> :
+                            <div style={{ display: "none" }} />
+                    }
                     <div id="lower-row" style={{ height: (twoLines ? "50%" : "100%") }}>
-                        <div className="title-category"> {twoLines ? this.props.state.line2 : this.props.state.line1}</div>
+                        <div className="title-category">
+                            {twoLines ? this.props.state.line2 : this.props.state.line1}
+                        </div>
                         <div className="title-attempts">{attemptsLabel}</div>
                     </div>
                 </div>

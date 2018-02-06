@@ -2,6 +2,8 @@ import * as React from "react";
 import * as LiveSplit from "../livesplit";
 import Split from "./Split";
 
+import "./Splits.scss";
+
 export interface Props {
     state: LiveSplit.SplitsComponentStateJson,
     layoutState: LiveSplit.LayoutStateJson,

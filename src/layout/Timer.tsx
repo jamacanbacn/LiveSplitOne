@@ -2,6 +2,8 @@ import * as React from "react";
 import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 
+import "./Timer.scss";
+
 export interface Props {
     state: LiveSplit.TimerComponentStateJson,
     componentId: string,

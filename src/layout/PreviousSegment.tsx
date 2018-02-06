@@ -3,6 +3,8 @@ import * as LiveSplit from "../livesplit";
 import { colorToCss, gradientToCss } from "../util/ColorUtil";
 import { map } from "../util/OptionUtil";
 
+import "./PreviousSegment.scss";
+
 export interface Props { state: LiveSplit.PreviousSegmentComponentStateJson }
 
 export default class PreviousSegment extends React.Component<Props> {

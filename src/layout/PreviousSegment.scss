@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.previous-segment {
+    @extend %info-text-component;
+}
+
+.previous-segment-text {
+    @extend %info-text-component-text;
+}
+
+.previous-segment-time {
+    @extend %info-text-component-value;
+}

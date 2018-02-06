@@ -1,6 +1,5 @@
 import * as React from "react";
 import { ComponentStateJson, LayoutStateJson } from "../livesplit";
-import { assertNever } from "../util/OptionUtil";
 import BlankSpace from "./BlankSpace";
 import CurrentComparison from "./CurrentComparison";
 import CurrentPace from "./CurrentPace";
@@ -41,10 +40,7 @@ export default class Component extends React.Component<Props> {
         } else if ("PreviousSegment" in state) {
             return <PreviousSegment state={state.PreviousSegment} />;
         } else if ("Splits" in state) {
-            return <Splits
-                state={state.Splits}
-                layoutState={layoutState}
-            />;
+            return <Splits state={state.Splits} layoutState={layoutState} />;
         } else if ("SumOfBest" in state) {
             return <SumOfBest state={state.SumOfBest} />;
         } else if ("Text" in state) {
@@ -57,10 +53,8 @@ export default class Component extends React.Component<Props> {
             return <TotalPlaytime state={state.TotalPlaytime} />;
         } else if ("Separator" in state) {
             return <Separator layoutState={layoutState} />;
-        } else if ("BlankSpace" in state) {
-            return <BlankSpace state={state.BlankSpace} />;
         } else {
-            return assertNever(state);
+            return <BlankSpace state={state.BlankSpace} />;
         }
     }
 }

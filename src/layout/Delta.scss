@@ -1,0 +1,13 @@
+@import "InfoTextComponent.scss";
+
+.delta-component {
+    @extend %info-text-component;
+}
+
+.delta-component-text {
+    @extend %info-text-component-text;
+}
+
+.delta-component-time {
+    @extend %info-text-component-value;
+}
